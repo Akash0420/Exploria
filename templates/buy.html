@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            Country
+             <input autocomplete="off" autofocus class="form-control" name="country" placeholder="Country" list="country" type="text">
+              <datalist id="country">
+                   <option value="Switzerland">$1000 USD </option>
+                   <option value="France"/>$200 USD </option>
+                   <option value="Japan"/>$500 USD </option>
+                   <option value="Singapore"/>$700 USD </option>
+            </datalist>
+            <br><br>
+        </div>
+
+
+        <div class="form-group">
+            Number of people
+            <input autocomplete="off" autofocus class="form-control" name="people" placeholder="Number of People" type="text">
+        </div>
+        <div class="form-group">
+            Begin Date
+            <input autocomplete="off" autofocus class="form-control" name="from_date" placeholder="from_date" type="date">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Buy Now</button>
+    </form>
+{% endblock %}

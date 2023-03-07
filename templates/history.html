@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Booked/Cancelled</th>
+                <th scope="col">from_date</th>
+                <th scope="col">place</th>
+                <th scope="col">price</th>
+                <th scope="col">people</th>
+                <th scope="col">Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{transaction["type"]}}</td>
+                <td>{{transaction["from_date"]}}</td>
+                <td>{{transaction["place"]}}</td>
+                <td>{{transaction["price"]}}</td>
+                <td>{{transaction["people"]}}</td>
+                <td>{{transaction["datetime"]}}</td>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

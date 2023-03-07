@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/style.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <head>
+        <title>Travel Website</title>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/"><span class="blue">Exploria</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session.user_id %}
+                    <ul class="navbar-nav mr-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/choose">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/buy">Book Now</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Cancellation">Cancel Plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/add">Add Cash</a></li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/changepassword">Change Password</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+        <section class="header">
+        <div class="container">
+            <img src="https://www.logolynx.com/images/logolynx/c7/c71a121aaddde59c7ed7ac4eb87c63f1.png">
+        </div>
+        <h1>Travel Across The Globe</h1>
+        </section>
+        <section class="features">
+            <h1>Featured Destinations</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-mid-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img src="https://i.pinimg.com/originals/e8/c7/c4/e8c7c4d4e14a9e3b21faf3d7b37c5b03.jpg" style="width:500px;height:500px;">
+                                <div class="price">
+                                    <p>450$</p>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                            </div>
+                            <div class="feature-details">
+                                <h4>Australia</h4>
+                                <p>In every corner of Australia you’ll find unique experiences and landscapes bursting with colour, culture and natural beauty. Take a moment to travel through the country’s most captivating scenes</p>
+                            </div>
+                            <div>
+
+                                <span><i class="fa fa-map-marker"></i>Australia</span>
+                                <span><i class="fa fa-sun-o"></i>4 Days</span>
+                                <span><i class="fa fa-moon-o"></i>3 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mid-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img src="https://cdn.cnn.com/cnnnext/dam/assets/170606121226-japan---travel-destination---shutterstock-230107657.jpg" style="width:500px;height:500px;">
+                                <div class="price">
+                                    <p>500$</p>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                            </div>
+                            <div class="feature-details">
+                                <h4>Japan</h4>
+                                <p>Engage in Cultural Experiences to Discover Japan's Unique Sense of Aesthetic Beauty</p>
+                            </div>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Japan</span>
+                                <span><i class="fa fa-sun-o"></i>5 Days</span>
+                                <span><i class="fa fa-moon-o"></i>4 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="feature-box">
+                            <div class="feature-img">
+                                <img src="https://sweden.se/wp-content/uploads/2016/04/570f9b0a6c69e-93c26ddb08e6b5ae0ed7a86504c6492b.jpg" style="width:500px;height:500px;">
+                                <div class="price">
+                                    <p>700$</p>
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="feature-details">
+                                <h4>Sweden</h4>
+                                <p>Sweden occupies the greater part of the Scandinavian Peninsula, which it shares with Norway. The land slopes gently from the high mountains along the Norwegian frontier eastward to the Baltic Sea. Geologically, it is one of the oldest and most stable parts of the Earth’s crust.</p>
+                            </div>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Sweden</span>
+                                <span><i class="fa fa-sun-o"></i>4 Days</span>
+                                <span><i class="fa fa-moon-o"></i>3 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+        <h1>Travelling Gallery</h1>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-3">
+            <div class="gallery-box">
+               <img src="https://s29745.pcdn.co/wp-content/uploads/2019/11/Sydney-Facts-1.jpg.optimal.jpg" >
+               <h4>Australia</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="gallery-box">
+               <img src="https://www.nationalgeographic.com/content/dam/travel/Guide-Pages/europe/city-aerial-zurich-switzerland.adapt.1900.1.jpg">
+               <h4>Switzerland</h4>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        <section class="banner">
+            <div class="banner-highlights">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-mid-8">
+                            <h2>Get 30% on top destinations</h2>
+                            <p>Book your tickets before 31st March and avail 30% flat discount.</p>
+                        </div>
+                        <div class="col-mid-4">
+                            <button type="button" class="booking-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="users-feedback">
+            <h1>Users Review</h1>
+            <div class="container">
+                <div class="row">
+                <div class="col-mid-4">
+                    <div class="user-review">
+                    <p>very good it was a very fun experience.
+                    will recommend this to others</p>
+                    <h5>Aditya Kumar</h5>
+                    <small>Australia</small>
+                    </div>
+                    <img src="https://images.mid-day.com/images/2018/jun/Pillai_d.jpg">
+                </div>
+                <div class="col-mid-4">
+                    <div class="user-review">
+                    <p>very good it was a very fun experience.
+                    will recommend this to others</p>
+                    <h5>lee dan-hoon</h5>
+                    <small>U.S.A</small>
+                    </div>
+                    <img src="https://www.themasculinetraveler.com/wp-content/uploads/2019/01/japanese-woman-0.jpg">
+               <div class="col-mid-4"></div>
+                    <div class="user-review">
+                    <p>very good it was a very fun experience.
+                    will recommend this to others</p>
+                    <h5>Chris hemsworth</h5>
+                    <small>India</small>
+                    </div>
+                    <img src="https://s3.envato.com/files/176092690/MAS_9006.jpg">
+               </div>
+               </div>
+               </div>
+        </section>
+        <sectionclass="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="https://www.logolynx.com/images/logolynx/c7/c71a121aaddde59c7ed7ac4eb87c63f1.png" class="footer-logo">
+                        <p> hello hi yolo.</p>
+                    </div>
+                    <div class="col-md-3">
+                    <h4>Features</h4>
+                    <p>Deals & Offers</p>
+                    <p>Customer Reviews</p>
+                    <p>Cancelation Policy</p>
+                    </div>
+                    <div class="col-md-3">
+                    <h4>Quick Contact</h4>
+                    <p><i class="fa fa-phone-square"></i> +91 0123456789</p>
+                    <p><i class="fa fa-envelope"></i> heloo@finalproject.com</p>
+                    <p><i class="fa fa-home"></i>xyz Road, ABC city</p>
+                    </div>
+                    <div class="col-md-3">
+                    <h4>Follow Us on</h4>
+                    <p><i class="fa fa-facebook-official"></i> facebook</p>
+                    <p><i class="fa fa-instagram"></i> instagram</p>
+                    <p><i class="fa fa-twitter"></i>twitter</p>
+                    </div>
+                </div><hr>
+                    <p class="copyright">Made By Akash Menon</p>
+            </div>
+        </section>
+    </body>
+</html>

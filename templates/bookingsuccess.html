@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Added
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <h2>Booking Success! Congratulations, You are going to {{ country }}! </h2>
+        <br>
+        <h3><a class="nav-link" href="/choose">Explore more countries</a></h3>
+        <br>
+        <h4>Your account balance is</h4> <h3>{{ cash }}</h3>
+        <a class="nav-link" href="/add">Add More Cash</a>
+
+    </form>
+{% endblock %}

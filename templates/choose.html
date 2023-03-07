@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Choose
+{% endblock %}
+
+{% block main %}
+
+    <p class="header">Pick a country to Explore</p>
+    <form action="/choose" method="post">
+         <div class="form-group">
+            Country
+             <input autocomplete="off" autofocus class="form-control" name="country" placeholder="Country" list="country" type="text">
+              <datalist id="country">
+                   <option value="Switzerland"></option>
+                   <option value="France"/></option>
+                   <option value="Japan"/></option>
+                   <option value="Singapore"/></option>
+            </datalist>
+            <br><br>
+        </div>
+        <button class="btn btn-primary" type="submit">Get Price</button>
+        <br><br>
+    </form>
+
+{% endblock %}
+
+
