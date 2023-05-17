@@ -1,4 +1,4 @@
-# CS50 Final Project:-Exploria
+# Exploria
 
 ## Exploria is a Tour And Travel Package web app. The following functionalities have been implemented-
 
@@ -15,11 +15,8 @@
 ## Technologies Used-
 * python
 * flask
-* jinja
 * sqlite
-* sql
 * html
 * css
+* javascript
 * bootstrap
-
-## Youtube url:- https://youtu.be/79xfjabLNSQ
